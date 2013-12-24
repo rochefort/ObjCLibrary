@@ -1,0 +1,18 @@
+
+/* Class = "IBUISegmentedControl"; 49s-Zz-bI4.segmentTitles[0] = "All"; ObjectID = "49s-Zz-bI4"; */
+"49s-Zz-bI4.segmentTitles[0]" = "All";
+
+/* Class = "IBUISegmentedControl"; 49s-Zz-bI4.segmentTitles[1] = "Unread"; ObjectID = "49s-Zz-bI4"; */
+"49s-Zz-bI4.segmentTitles[1]" = "Unread";
+
+/* Class = "IBUILabel"; text = "2011/10/12"; ObjectID = "M0i-G7-fLj"; */
+"M0i-G7-fLj.text" = "2011/10/12";
+
+/* Class = "IBUILabel"; text = "Audio & Video\v"; ObjectID = "Osp-Hx-4KI"; */
+"Osp-Hx-4KI.text" = "Audio & Video\v";
+
+/* Class = "IBUILabel"; text = "AV Foundationプログラミングガイド"; ObjectID = "aCS-As-z02"; */
+"aCS-As-z02.text" = "AV Foundationプログラミングガイド";
+
+/* Class = "IBUILabel"; text = "済み"; ObjectID = "coJ-ho-zX4"; */
+"coJ-ho-zX4.text" = "済み";

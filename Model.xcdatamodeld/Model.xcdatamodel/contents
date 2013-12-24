@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DocumentEntity" representedClassName="DocumentEntity" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="download_status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="framework" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link_en" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link_jp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="5" defaultValueString="0" syncable="YES"/>
+        <attribute name="read_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="revision_date_en" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="revision_date_jp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sub_topic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title_en" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title_jp" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="downloads" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DownloadEntity" inverseName="document" inverseEntity="DownloadEntity" syncable="YES"/>
+    </entity>
+    <entity name="DownloadEntity" representedClassName="DownloadEntity" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="deleted" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="download_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pdf_name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="document" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DocumentEntity" inverseName="downloads" inverseEntity="DocumentEntity" syncable="YES"/>
+        <fetchedProperty name="active" optional="YES" syncable="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="DownloadEntity" predicateString="deleted==0"/>
+        </fetchedProperty>
+    </entity>
+    <elements>
+        <element name="DocumentEntity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DownloadEntity" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
