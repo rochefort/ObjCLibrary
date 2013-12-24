@@ -1,0 +1,3 @@
+[submodule "apple_developer_documents_server"]
+	path = apple_developer_documents_server
+	url = git@github.com:rochefort/apple_developer_documents_server.git
